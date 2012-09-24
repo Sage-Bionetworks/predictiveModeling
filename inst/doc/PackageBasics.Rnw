@@ -1,0 +1,72 @@
+%\VignetteIndexEntry{An Introduction to the predictiveModeling R Package}
+%\VignetteDepends{}
+%\VignetteKeywords{ExpressionSet}
+%\VignettePackage{predictiveModeling}
+\documentclass[10pt]{article}
+
+\usepackage{times}
+\usepackage{hyperref}
+
+\textwidth=6.5in
+\textheight=8.5in
+\oddsidemargin=-.1in
+\evensidemargin=-.1in
+\headheight=-.3in
+
+\newcommand{\Rfunction}[1]{{\texttt{#1}}}
+\newcommand{\Robject}[1]{{\texttt{#1}}}
+\newcommand{\Rpackage}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\texttt{#1}}}
+\newcommand{\Rfunarg}[1]{{\texttt{#1}}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rcode}[1]{{\texttt{#1}}}
+\newcommand{\software}[1]{\textsf{#1}}
+\newcommand{\R}{\software{R}}
+\newcommand{\predictiveModeling}{\Rpackage{predictiveModeling}}
+
+\title{An Introduction to \predictiveModeling{}}
+\author{Adam Margolin}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+TODO
+
+Add some R code here that demos the package, note that this gets executed as part of the package check so it should not take too long to run.  For longer running stuff we could also write vignettes but place them in a different directory so that they are not run as part of the package check.
+
+\section{Available Functions, Classes, and Objects}
+<<>>=
+library(predictiveModeling)
+ls('package:predictiveModeling')
+@
+
+\section{Available Demos}
+
+<<eval=FALSE>>=
+demo(package="predictiveModeling")
+@
+
+<<term=FALSE,echo=FALSE,keep.source=TRUE>>=
+demos <- demo(package="predictiveModeling")
+print(apply(demos$results, 1, function(x){paste(x['Item'], x['Title'])}))
+@
+
+\section{Citation}
+<<>>=
+citation("predictiveModeling")
+@
+
+\section{Session Information}
+
+The output of \Rfunction{sessionInfo} on the build system 
+after running this vignette.
+
+<<sessionInfo, results=tex, print=TRUE>>=
+toLatex(sessionInfo())
+@
+
+\end{document}

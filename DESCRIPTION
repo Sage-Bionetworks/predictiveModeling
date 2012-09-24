@@ -1,0 +1,35 @@
+Package: predictiveModeling
+Type: Package
+Title: The predictive modeling package allows users to write custom
+        predictive models or use off-the-shelf models via caret, and
+        compare their performance.
+Version: 0.12-5
+Date: 2012-9-20
+Author: Adam Margolin, Nicole Deflaux, Erhan Bilal
+Maintainer: Sage Bionetworks Software Platform Team
+        <platform@sagebase.org>
+Description: The predictive modeling package allows users to write custom
+    predictive models or use off-the-shelf models via caret, and compare their
+    performance.
+License: file LICENSE
+Imports: methods, RColorBrewer
+Depends: R(>= 2.13), foreach, caret, affy, survival, survcomp, glmnet,
+        randomSurvivalForest
+Suggests: synapseClient, RUnit
+Enhances: Rmpi
+LazyLoad: no
+LazyData: no
+Collate: 'createAggregateFeatureDataSet.R' 'createENetTuneGrid.R'
+        'createFeatureAndResponseDataList.R'
+        'crossValidatePredictiveModel.R' 'defaultTrainControl.R'
+        'filterPredictiveModelData.R' 'jet.colors.R'
+        'plotPredictiveModelHeatmap.R' 'PredictiveModelPerformance.R'
+        'PredictiveModelResults.R' 'testPackage.R' 'trainPartition.R'
+        'zzz.R' 'PredictiveModelFeatureEvaluator.R'
+        'filterNasFromMatrix.R' 'CaretModel.R' 'CoxModel.R'
+        'GlmnetModel.R' 'LinearModel.R' 'MostCorrelatedFeatures.R'
+        'PredictiveModel.R' 'convertDataFrameToFeatureMatrix.R'
+        'crossValidatePredictiveSurvivalModel.R'
+        'SurvivalModelPerformance.R' 'SurvivalModelPerformanceCV.R'
+        'exactConcordanceIndex.R' 'RSFmodel.R' 'exactConcordanceIndexV.R'
+Packaged: 2012-07-16 17:46:37 UTC; sagebio
