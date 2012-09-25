@@ -13,7 +13,7 @@ Description: The predictive modeling package allows users to write custom
     performance.
 License: file LICENSE
 Imports: methods, RColorBrewer
-Depends: R(>= 2.13), foreach, caret, affy, survival, survcomp, glmnet,
+Depends: R(>= 2.13), foreach, caret, affy, survival, glmnet,
         randomSurvivalForest
 Suggests: synapseClient, RUnit
 Enhances: Rmpi
