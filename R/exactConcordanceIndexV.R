@@ -6,13 +6,10 @@
 #' @export
 
 exactConcordanceIndexV <- function(predictions, observations) {
-  pos<-which(is.na(predictions))
-  a1<-which(is.na(observations[,1]))
-  a2<-which(is.na(observations[,2]))
-  pos<-union(pos,union(a1,a2))
+  pos<-which(is.na(predictions)==0)
 
-  predictions <-predictions[-pos]
-  observations<-observations[-pos,]
+  predictions <-predictions[pos]
+  observations<-observations[pos,]
   
   xy <- expand.grid(i=1:(length(observations)/2), j=1:(length(observations)/2))
   
