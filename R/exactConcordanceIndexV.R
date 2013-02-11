@@ -6,8 +6,12 @@
 #' @export
 
 exactConcordanceIndexV <- function(predictions, observations) {
-  pos<-which(is.na(predictions)==0)
+  pos1<-which(is.na(predictions)==0)
 
+  pos2<-which(is.na(observations[,1])==0)
+
+  pos3<-which(is.na(observations[,2])==0)
+  pos<-intersect(pos1,intersect(pos2,pos3))
   predictions <-predictions[pos]
   observations<-observations[pos,]
   
